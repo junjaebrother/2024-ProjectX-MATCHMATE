@@ -15,20 +15,41 @@ public class User {
     private Long id = null;
 
     @Column(nullable = false, length = 20)
-    private String username;
+    private String name;
     private String phone_number;
     private String email;
 
     @OneToOne
     private Profile profile;
 
-    @OneToMany(mappedBy = "User", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Notification> notifications = new ArrayList<>();
+
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getPhone_number() {
+        return phone_number;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public Profile getProfile() {
+        return profile;
+    }
 
     public User() {}
 
-    public User(String username, String phone_number, String email) {
-        this.username = username;
+    public User(String name, String phone_number, String email) {
+        this.name = name;
         this.phone_number = phone_number;
         this.email = email;
     }

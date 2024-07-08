@@ -17,6 +17,26 @@ public class Notification {
 
     public Notification() {}
 
+    public Long getId() {
+        return id;
+    }
+
+    public Integer getType() {
+        return type;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public String getSender() {
+        return sender;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
     public Notification(Integer type, String message, String sender, User user) {
         this.type = type;
         this.message = message;

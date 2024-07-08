@@ -13,6 +13,18 @@ public class Profile {
     // private location
     private String bio;
 
+    public Long getId() {
+        return id;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public String getBio() {
+        return bio;
+    }
+
     public Profile() {}
 
     public Profile(User user, String bio) {
